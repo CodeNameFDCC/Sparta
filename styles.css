@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+.manu
+{
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .25s ease;
+    opacity: 0;
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page:not(.active) {
+    transform: translateY(100%);
+}
+
+.page-content {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.page.active .page-content {
+    animation: fadeIn 0.25s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navigation {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: white;
+    transform: scale(1.25);
+}
+
+#page1 {
+    background-color: #3B82F6;
+}
+
+/* blue */
+#page2 {
+    background-color: #10B981;
+}
+
+/* green */
+#page3 {
+    background-color: #F59E0B;
+}
+
+/* yellow */
+#page4 {
+    background-color: #EF4444;
+}
+
+/* red */
+#page5 {
+    background-color: #8B5CF6;
+}
+
+/* purple */
+#page6 {
+    background-color: #EC4899;
+}
+
+/* pink */
+#page7 {
+    background-color: #6366F1;
+}
+
+/* indigo */
+#page8 {
+    background-color: #6B7280;
+}
+
+/* gray */
