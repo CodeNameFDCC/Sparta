@@ -15,7 +15,7 @@ function changePage(newPage) {
     // 새 페이지 활성화
     document.querySelector(`#page${newPage}`).classList.add('active');
     document.querySelector(`[data-page="${newPage}"]`).classList.add('active');
-
+    
     currentPage = newPage;
 
     // 스크롤 쿨다운

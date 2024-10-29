@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Animation Website</title>
-    <p class = "manu">document</p>
+    <p class="manu">document</p>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">  
+    <div class="container">
         <div id="page1" class="page active">
             <canvas id="canvas" width=1920 height="1080">
             </canvas>
         </div>
         <div id="page2" class="page">
-            <div class="page-content">Page 2</div>
+            <div class="horizontal_container">
+                <div class="horizontal_box">박스1</div>
+                <div class="horizontal_box">박스2</div>
+                <div class="horizontal_box">박스3</div>
+                <div class="horizontal_box">박스4</div>
+                <div class="horizontal_box">박스5</div>
+            </div>
+
         </div>
         <div id="page3" class="page">
             <div class="page-content">Page 3</div>
@@ -37,7 +44,7 @@
             <div class="page-content">Page 8</div>
 
         </div>
-        
+
 
         <div class="navigation">
             <div class="nav-dot active" data-page="1"></div>

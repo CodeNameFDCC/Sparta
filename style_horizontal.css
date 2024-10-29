@@ -1,0 +1,12 @@
+.horizontal_container {
+    display: flex;
+    
+    width: 100vh;
+    height:100vh;
+}
+
+.horizontal_box {
+    width: 100vh;
+    height: 100vh;
+    background-color: lightblue;
+}
