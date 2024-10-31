@@ -1,4 +1,4 @@
-const canvas6 = document.getElementById("canvas6");
+const canvas6 = document.getElementById("canvas3");
 const ctx6 = canvas6.getContext("2d");
 
 // 랜덤 색상 생성 함수
@@ -31,7 +31,7 @@ function drawRandomShape6() {
 
 // 계속해서 도형을 랜덤하게 그리는 애니메이션 함수
 function animateShapes6() {
-    if (currentPage != 6) {
+    if (currentPage != 3) {
         ctx6.clearRect(0, 0, canvas6.width, canvas6.height); // 캔버스 지우기
         requestAnimationFrame(animateShapes6); // 반복 호출하여 애니메이션 유지
         return;
@@ -42,3 +42,4 @@ function animateShapes6() {
 
 // 애니메이션 시작
 animateShapes6();
+

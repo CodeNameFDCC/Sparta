@@ -1,6 +1,8 @@
 let currentPage = 1;
 let isScrolling = false;
-const totalPages = 8;
+const totalPages = 5;
+
+
 
 // 페이지 변경 함수
 function changePage(newPage) {
@@ -29,10 +31,8 @@ window.addEventListener('wheel', (e) => {
     if (isScrolling) return;
 
     if (e.deltaY > 0 && currentPage < totalPages) {
-        // 아래로 스크롤
         changePage(currentPage + 1);
     } else if (e.deltaY < 0 && currentPage > 1) {
-        // 위로 스크롤
         changePage(currentPage - 1);
     }
 });
