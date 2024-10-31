@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+* {
+    font-family: "Gowun Dodum", sans-serif;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+.banner {
+    background: #007BFF;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+img:hover {
+    transition: 1s;
+    scale: 125%;
+    rotate: 45;
+}
+
+.grid-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    height: auto;
+}
+
+/* 다크 모드 스타일 */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header.dark-mode {
+    background: #1e1e1e;
+}
+
+.banner.dark-mode {
+    background: #002c5a;
+}
+
+.grid-item.dark-mode {
+    background: #1e1e1e;
+    border: 1px solid #444;
+}
+
+h2.dark-mode {
+    color: #e0e0e0;
+}
