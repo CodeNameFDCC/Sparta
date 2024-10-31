@@ -1,0 +1,229 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 10% 10%;
+    }
+
+    100% {
+        background-position: 90% 90%;
+    }
+}
+
+.main_img {
+    /* 사이즈 - 깃으로 옮길때 고쳐야함. */
+    width: 100%;
+    height: 100%;
+
+    /* Gradients 배경 적용하기 */
+    background-image: linear-gradient(-30deg, #30cfd0 0%, #330867 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 4.5s linear infinite alternate;
+}
+
+/* 컨테이너 */
+.container {
+    /*부모 사이즈 기준 컨테이너*/
+    width: 100%;
+    height: 100%;
+
+    /*정렬 - 로우*/
+    display: flex;
+    flex-direction: row;
+}
+
+.item1 {
+
+    color: white;
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.item2 {
+
+    color: white;
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.text_area {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #020202;
+}
+
+.menu {
+
+    color: white;
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/*호버효과메뉴버튼*/
+
+.sub_menu {
+    font-family: roboto;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 10%;
+    border-radius: 9px;
+    font-size: 1.5rem;
+    color: #eaeaea;
+    font-weight: bold;
+    background-color: #ff2e63;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    --a: initial;
+
+
+    writing-mode: horizontal-tb;
+    /* 수평 모드 */
+    transform: rotate(0deg);
+    /* 회전이 없도록 설정 */
+}
+
+.sub_menu:after {
+    content: "";
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    width: var(--diameter);
+    height: var(--diameter);
+    transform: scale(0);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: var(--a);
+
+}
+
+@keyframes ripple-effect {
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/*3d카드 느낌 나게해주는 css*/
+
+#frame {
+    width: 70%;
+    height: 80%;
+    transition: transform 200ms;
+
+    &:hover {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+}
+
+#card {
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    background-image: url("./images/card_01.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition-duration: 250ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+}
+
+#light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+
+/*뭔가 해커느낌나는 효과*/
+
+#text01 {
+    background-color: rgb(195, 58, 177);
+    margin: 20px auto 20px auto;
+
+    width: 90%;
+    height: 10%;
+
+}
+
+#text02 {
+    /*폰트 설정.*/
+    font-family: 'VT323', monospace;
+    max-width: 80%;
+    white-space: pre-line;
+    letter-spacing: 0.1em;
+    font-size: 2.0em;
+    color: #05d1e1;
+    text-shadow: 0 0 8px #05d1e1, 0 0 12px #05d1e1, 0 0 16px #e4d808, 0 0 20px #e4d808;
+
+}
+
+
+/*글리치*/
+
+.text_area>h1 {
+    font-size: 4rem;
+    color: #f1f1f1;
+    position: relative;
+
+    transform: skew(var(--skew)) skew(var(--scale));
+    margin: 10px;
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    transform: clip-path 50ms ease-in;
+    background-color: #020202;
+}
+
+h1::before {
+    left: 5px;
+    text-shadow: 2px -2px #2a96d4;
+    clip-path: polygon(0 var(--t1), 100% var(--t1), 100% var(--b1), 0 var(--b1));
+}
+
+h1::after {
+    left: 5px;
+    text-shadow: -2px 2px #cc2a1f;
+    clip-path: polygon(0 var(--t2), 100% var(--t2), 100% var(--b2), 0 var(--b2));
+}
+
+/*사운드*/
+audio {
+    width: 100%;
+}

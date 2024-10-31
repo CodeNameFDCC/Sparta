@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWS_Page</title>
+    <link rel="stylesheet" href="H_page.css"> <!-- 외부CSS -->
+</head>
+
+<body>
+    <script src="H_page.js"></script> <!-- 외부스크립트 -->
+    <div class="main_img">
+        <div class="container">
+            <div class="item1">
+                <div id="frame">
+                    <div id="card">
+                        <div id="light"></div>
+                    </div>
+                    <audio id="myAudio" src="sounds/sound01.mp3" controls="controls" autoplay="autoplay" volume="0.05" loop></audio><br/>
+                    <script>soundVolume('audio', 0.05);</script>
+                </div>
+                <script> movingCard('frame', 'card', 'light'); </script> <!--카드움직임-->
+                
+            </div>
+            <div class="item2">
+                <div class="text_area">
+                    <h1 data-text="Node.js 7기 황윤석"> Node.js 7기 황윤석 </h1>
+                    <script> glitch_Tool('h1');</script> <!--글리치-->
+                    <p id="text02" class="text_area">버튼을 눌러주세요! </p>
+                    <script> paragraph_Tool('p');</script> <!-- 뭔가 해커느낌나는 효과 -->
+                </div>
+                <div class="menu"> <!-- 메뉴 구역 -->
+                    <button id="menu01" class="sub_menu"> 이름 </button>
+                    <button id="menu02" class="sub_menu"> 게임 </button>
+                    <button id="menu03" class="sub_menu"> mbti </button>
+                    <button id="menu04" class="sub_menu"> 음식 </button>
+                    <button id="menu05" class="sub_menu"> 좋아하는것 </button>
+                    <button id="menu06" class="sub_menu"> 하고싶은말 </button>
+                </div>
+                <script> hover_effect_Tool('.sub_menu');</script> <!-- 버튼 효과 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
