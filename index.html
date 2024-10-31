@@ -33,7 +33,7 @@
                         window.location.href = 'test/index.html'; // 다른 폴더의 HTML 파일 경로
                     }
                 </script>
-                <button onclick="openHtmlFile2()"  class="moving-button" id="button2">[팀원] 황윤석</button>
+                <button onclick="openHtmlFile2()" class="moving-button" id="button2">[팀원] 황윤석</button>
                 <script>
                     function openHtmlFile2() {
                         window.location.href = 'H_page.html'; // 다른 폴더의 HTML 파일 경로
@@ -48,7 +48,33 @@
             </div>
         </div>
         <div id="page5" class="page">
-            감사합니다.
+            <h1 class="rotate">감사합니다.</h1>
+
+            <style>
+                .rotate
+                {
+                    animation-duration: 1s;
+                    animation-name: rotate_anim;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes rotate_anim {
+                    0% {
+                        transform: rotate(0deg)
+                        scale(100%)
+                    }
+
+                    50% {
+                        transform: rotate(45deg)
+                        scale(150%)
+                    }
+
+                    100% {
+                        transform: rotate(0deg)
+                        scale(100%)
+                    }
+                }
+            </style>
         </div>
 
 

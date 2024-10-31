@@ -6,15 +6,14 @@ export class Rain {
     }
 
     start() {
-
         this.raining = true;
-        this.interval = setInterval(() => this.createDrop(), 100); // 드롭 생성 간격
+        this.interval = setInterval(() => this.createDrop(), 100); // 비 생성 간격
     }
 
     stop() {
         this.raining = false;
         clearInterval(this.interval);
-        this.container.innerHTML = ''; // 모든 드롭 제거
+        this.container.innerHTML = ''; // 모든 비 제거
     }
 
     createDrop() {
@@ -24,14 +23,14 @@ export class Rain {
         drop.style.animationDuration = Math.random() * 1 + 0.5 + 's'; // 랜덤한 속도
         this.container.appendChild(drop);
 
-        // 드롭이 떨어진 후 제거
+        // 비가 떨어진 후 제거
         drop.addEventListener('animationend', () => {
             drop.remove();
         });
     }
 }
 
-const rainContainer = document.getElementById('overlay');
-const rain = new Rain(rainContainer);
-rain.start();
+// const rainContainer = document.getElementById('overlay');
+// const rain = new Rain(rainContainer);
+// rain.start();
 

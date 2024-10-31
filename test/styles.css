@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@100..900&display=swap');
 
 * {
-    font-family: "Gowun Dodum", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
@@ -85,5 +84,3 @@ header.dark-mode {
 h2.dark-mode {
     color: #e0e0e0;
 }
-
-
