@@ -11,7 +11,7 @@
 .main_img {
     /* 사이즈 - 깃으로 옮길때 고쳐야함. */
     width: 100vw;
-    height: 700px;
+    height: 900px;
 
     /* Gradients 배경 적용하기 */
     background-image: linear-gradient(-30deg, #30cfd0 0%, #330867 100%);
