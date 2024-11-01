@@ -124,6 +124,48 @@
 
 }
 
+/*블로그이동*/
+
+.blog_menu {
+    font-family: roboto;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 10%;
+    border-radius: 9px;
+    font-size: 1.5rem;
+    color: #eaeaea;
+    font-weight: bold;
+    background-color: #ff2e63;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    --a: initial;
+
+
+    writing-mode: horizontal-tb;
+    /* 수평 모드 */
+    transform: rotate(0deg);
+    /* 회전이 없도록 설정 */
+}
+
+.blog_menu:after {
+    content: "";
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    width: var(--diameter);
+    height: var(--diameter);
+    transform: scale(0);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: var(--a);
+
+}
+
+
 @keyframes ripple-effect {
     100% {
         transform: scale(1);
