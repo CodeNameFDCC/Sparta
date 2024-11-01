@@ -69,6 +69,7 @@
             }
 
         }
+
         body {
             width: 100%;
             height: 100%;
@@ -77,6 +78,26 @@
             animation: gradientAnimation 4.5s linear infinite alternate;
         }
 
+        .Title {
+            animation-duration: 3s;
+            animation-name: Title_Anim;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            color: aqua;
+            /* -webkit-text-stroke: 1px rgb(106, 19, 177); */
+        }
+
+        @keyframes Title_Anim {
+            from {
+                margin-left: 10%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -95,13 +116,14 @@
     <div class="main">
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
             <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">최동현</h1>
-                <p class="col-md-8 fs-4">17학번 세명대학교 컴퓨터학부 컴퓨터시스템학 졸업생</p>
+                <h1 class="display-5 fw-bold Title">최동현</h1>
+                <p class="col-md-8 fs-4 Title">17학번 세명대학교 컴퓨터학부 컴퓨터시스템학 졸업생</p>
+                <button onclick="location.href='https://velog.io/@iroha981130/posts'" type="button" class="btn btn-primary">MyBlog</button>
             </div>
         </div>
     </div>
 
-    
+
     <div class="mycards">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
