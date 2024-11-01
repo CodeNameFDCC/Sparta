@@ -237,3 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// 주소로 이동하는 함수
+function goToBlog() {
+    window.location.href = "https://ideas3624.tistory.com/"; // 블로그 URL을 입력하세요.
+}
